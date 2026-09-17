@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Company Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <button onclick="goToDashboard()">
+            ← Dashboard
+        </button>
+
+        <h1>Placement Management System</h1>
+
+        <p>Company Management</p>
+
+
+        <!-- Company Form -->
+        <div class="form-box">
+
+            <input
+                type="text"
+                id="company_name"
+                placeholder="Company Name"
+            >
+
+            <input
+                type="text"
+                id="job_role"
+                placeholder="Job Role"
+            >
+
+            <input
+                type="number"
+                step="0.01"
+                id="package"
+                placeholder="Package (LPA)"
+            >
+
+            <input
+                type="number"
+                step="0.01"
+                id="eligibility_cgpa"
+                placeholder="Eligibility CGPA"
+            >
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Location"
+            >
+
+            <button onclick="addCompany()">
+                Add Company
+            </button>
+
+        </div>
+
+
+        <!-- Search Box -->
+        <input
+            type="text"
+            id="companySearch"
+            placeholder="Search by Company Name or Job Role"
+            onkeyup="searchCompany()"
+        >
+
+
+        <h2>Company List</h2>
+
+
+        <!-- Company Table -->
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Company Name</th>
+                    <th>Job Role</th>
+                    <th>Package</th>
+                    <th>Eligibility CGPA</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody id="companyTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <script src="company.js"></script>
+
+    <script>
+
+        function goToDashboard() {
+            window.location.href = "dashboard.html";
+        }
+
+    </script>
+
+</body>
+
+</html>
