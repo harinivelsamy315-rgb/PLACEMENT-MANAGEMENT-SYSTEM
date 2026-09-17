@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Placement Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <button onclick="goToDashboard()">
+            ← Dashboard
+        </button>
+
+        <h1>Placement Management System</h1>
+
+        <p>Placement Management</p>
+
+
+        <!-- Placement Form -->
+        <div class="form-box">
+
+            <select id="student">
+                <option value="">Select Student</option>
+            </select>
+
+            <select id="company">
+                <option value="">Select Company</option>
+            </select>
+
+            <input
+                type="text"
+                id="job_role"
+                placeholder="Job Role"
+            >
+
+            <select id="status">
+                <option value="">Select Status</option>
+                <option value="Applied">Applied</option>
+                <option value="Selected">Selected</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+
+            <input
+                type="date"
+                id="placement_date"
+            >
+
+            <button onclick="addPlacement()">
+                Add Placement
+            </button>
+
+        </div>
+
+
+        <!-- Search Box -->
+        <input
+            type="text"
+            id="placementSearch"
+            placeholder="Search by Student or Company"
+            onkeyup="searchPlacement()"
+        >
+
+
+        <h2>Placement List</h2>
+
+
+        <!-- Placement Table -->
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Student</th>
+                    <th>Company</th>
+                    <th>Job Role</th>
+                    <th>Status</th>
+                    <th>Placement Date</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody id="placementTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <script src="placement.js"></script>
+
+    <script>
+
+        function goToDashboard() {
+            window.location.href = "dashboard.html";
+        }
+
+    </script>
+
+</body>
+
+</html>
