@@ -1,0 +1,10 @@
+frontend/
+├── index.html
+├── style.css
+├── script.js
+├── company.html
+├── company.js
+├── placement.html
+├── placement.js
+├── dashboard.html
+└── dashboard.js
